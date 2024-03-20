@@ -1,0 +1,121 @@
+ <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="form_style.css">
+		<script>
+			function revealForm(x){
+				if(x == "student"){
+					document.getElementById("student").style.display = "block";
+					document.getElementById("teacher").style.display = "none";
+				}
+				else{
+					document.getElementById("teacher").style.display = "block";
+					document.getElementById("student").style.display = "none";
+				}
+			}
+ 
+			function revealStd(x){
+				if(x == "1" || x == "2"){
+					document.getElementById("frst_scnd").style.display = "block";
+					document.getElementById("third").style.display = "none";
+					document.getElementById("fourth").style.display = "none";
+				}
+				else if(x == "3"){
+					document.getElementById("third").style.display = "block";
+					document.getElementById("frst_scnd").style.display = "none";
+					document.getElementById("fourth").style.display = "none";
+				}
+				else{
+					document.getElementById("fourth").style.display = "block";
+					document.getElementById("frst_scnd").style.display = "none";
+					document.getElementById("third").style.display = "none";
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<a href = "../mainte.html">Go Back</a><br>
+		<label for="user_type">Choose category: </label>
+		<select name="user_type" id="user_type" onchange="revealForm(this.value)">
+			<option value="teacher">Teacher</option>
+			<option value="student">Student</option>
+		</select>
+	
+		<div id="teacher">
+			<!-- method 'post' used to submit data -->
+			<form action = "insert.php" method = "post">
+
+				<label>Name:</label>
+				<input type="text" name="name" id="name" required><br>
+				
+				<label>DOB (YYYY-MM-DD):</label>
+				<input type="text" name="dob" id="dob" required><br>
+				
+				<label>Department of:</label>
+				<input type="text" name="dept" id="dept" required><br>
+				
+				<label>Salary:</label>
+				<input type="text" name="salary" id="salary" required><br>
+				
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		
+		<div id="student">
+			<form action = "insert.php" method = "post">
+				<label for="yr_lvl">Year Level:</label>
+				<select name="yr_lvl" id="yr_lvl" onchange="revealStd(this.value)">
+					<option value="1">First</option>
+					<option value="2">Second</option>
+					<option value="3">Third</option>
+					<option value="4">Fourth</option>
+				</select>
+				<br>
+				
+				<label for="name">Name:</label>
+				<input type="text" name="name" id="name" required><br>
+				
+				<label>DOB ((YYYY-MM-DD)):</label>
+				<input type="text" name="dob" id="dob" required><br>
+				
+				<label>GPA:</label>
+				<input type="text" name="gpa" id="gpa" required><br>
+				
+				<label>Course:</label>
+				<input type="text" name="course" id="major" required><br>
+				
+				<div id="frst_scnd">
+					<label>Elective:</label>
+					<input type="text" name="elective" id="elective" required><br>
+				</div>
+				
+				<div id="third">
+					<label>Internship status:</label>
+					<select id="intern">
+						<option value="np">No Progress</option>
+						<option value="og">Ongoing</option>
+						<option value="pd">Pending</option>
+						<option value="fn">Finished</option>
+					</select>
+				</div>
+				
+				<div id="fourth">
+					<label>Thesis Adviser</label>
+					<input type="text" name="ta" id="ta" required><br>
+					
+					<label>Thesis status:</label>
+					<select id="intern">
+						<option value="np">No Progress</option>
+						<option value="og">Ongoing</option>
+						<option value="pd">Pending</option>
+						<option value="fn">Finished</option>
+					</select>
+				</div>
+				
+				<input type="submit">
+			</form>
+		</div>
+	</body>
+</html>

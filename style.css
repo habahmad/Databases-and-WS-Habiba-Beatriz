@@ -1,0 +1,140 @@
+	html, body{
+		width: 100%;
+        height: 100%;
+		padding: 2px;
+		margin: -2px;
+		font-family: verdana;
+	}
+	
+	#header{
+		background-color: #960b28;
+		height: 100px;
+		color: white;
+		padding-bottom: 10px;
+	}
+	
+	#logo{
+		width: 230px;
+		float: left;
+		text-align: left;
+		overflow: hidden;
+		padding-left: 10px;
+	}
+	
+	#unilogo{
+		width: 87px;
+		height: 110px;
+		float: left;
+	}
+	
+	#padding{
+		padding-top: 22px;
+	}
+	
+	#unitext{
+		color: white;
+		margin-left: 97px;
+		font-family: helvetica;
+		font-weight: 600;
+		font-size: 36px;
+		line-height: 90%;
+	}
+	
+	#navi{
+		padding-top: 15px;
+		width: 100%;
+		padding-bottom: 50px;
+	}
+	
+	#tab{
+		width: 25%;
+	}
+	
+	#btn{
+		text-align: center;
+	}
+	
+	img{
+		width: 40px;
+		height: 40px;
+	}
+	
+	a{
+		text-decoration: none;
+		color: white;
+	}
+	
+	a:hover{
+		text-decoration: underline;
+	}
+	
+	#bar{
+		width: 30%;
+	}
+	
+	#btn{
+		text-align: center;
+		width: 90px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	
+	#blank{
+		background-color: #d18902;
+		padding: 1px;
+		font-size: 6px;
+		text-align: center;
+	}
+	
+	#main{
+		background-color: white;
+		text-align: left;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 420px;
+		padding-top: 10px;
+	}
+	
+	#sidebar{
+		width:180px;
+		float:left;
+	}
+	
+	#siderows{
+		width: 100%;
+	}
+	
+	#sidecells{
+		border-bottom: 1px solid gray;
+		text-align: left;
+	}
+	
+	#page{
+		margin-left: 250px;
+	}
+	
+	#display{
+		width: 100%;
+		text-align: left;
+	}
+	
+	#top{
+		text-align: center;
+	}
+	
+	td{
+		padding: 5px;
+	}
+
+	#disclaimer{
+		background-color: #b90b30;
+		border: 3px solid #d18902;
+		padding: 5px;
+		text-align: center;
+		color: white;
+	}
+	
+	#frmlnk{
+		color: blue;
+		text-decoration: underline;
+	}
